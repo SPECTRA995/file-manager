@@ -1,10 +1,10 @@
 const user = process.argv[2];
 let userName;
 
-if (user && user.startsWith('--username=')) {
-  userName = user.replace('--username=', '');
+if (user && user.startsWith("--username=")) {
+  userName = user.replace("--username=", "");
 } else {
-  userName = 'Noname';
+  userName = "Noname";
 }
 
 export const startWork = () => {
@@ -12,10 +12,10 @@ export const startWork = () => {
 };
 
 export const endWork = () => {
-  console.log(`Thank you for using File Manager, ${userName}, goodbye!`);
-  //process.exit();
+  console.log(` Thank you for using File Manager, ${userName}, goodbye!`);
+  process.exit();
 };
 
 export const getCurrentDirectory = () => {
   console.log(`You are currently in ${process.cwd()}`);
-}
+};
