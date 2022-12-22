@@ -1,3 +1,4 @@
+import { cd } from "../commands/cd.js";
 import { up } from "../commands/up.js";
 
 export const switchCmd = async (data) => {
@@ -9,6 +10,9 @@ export const switchCmd = async (data) => {
   switch (cmd) {
     case "up":
       up(path);
+      break;
+    case "cd":
+      cd(path);
       break;
     default:
       console.log("Invalid input");
